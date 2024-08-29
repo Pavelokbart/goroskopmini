@@ -1,0 +1,41 @@
+.goroskop-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 180px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.goroskop-icon {
+  font-size: 48px;
+  color: #6b38fb;
+  margin-bottom: 10px;
+}
+
+.goroskop-content {
+  flex-grow: 1;
+}
+
+.goroskop-footer {
+  width: 100%;
+}
+
+.goroskop-button {
+  background-color: #6b38fb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.goroskop-button:hover {
+  background-color: #5940d3;
+}
