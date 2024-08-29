@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './GoroskopBlock.css';
 
-function GoroskopBlock({ sign, icon, signkey, language }) {
+function GoroskopBlock({ sign, icon, signkey, language, period }) {
     const [horoscope, setHoroscope] = useState(null);
     const [loading, setLoading] = useState(false);
 
     const fetchHoroscope = async () => {
         setLoading(true);
-        console.log(signkey)
         try {
             const response = await fetch('https://poker247tech.ru/get_horoscope/', {
                 method: 'POST',
@@ -35,7 +34,7 @@ function GoroskopBlock({ sign, icon, signkey, language }) {
         <div className="goroskop-block">
             <div className="goroskop-icon">{icon}</div>
             <div className="goroskop-content">
-                <h3>{sign}</h3>
+                <h3>{sign} ({period})</h3> {/* Отображаем знак и период */}
                 {horoscope ? (
                     <p>{horoscope}</p>
                 ) : (
