@@ -3,7 +3,7 @@ import GoroskopBlock from './components/GoroskopBlock/GoroskopBlock';
 import './App.css';
 
 function App() {
-  const [language, setLanguage] = useState('original'); // 'original' for Russian, 'translated' for English
+  const [language, setLanguage] = useState('original');
 
   useEffect(() => {
     if (typeof window.Telegram !== 'undefined') {
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={toggleLanguage}>
+      <button className='switch-button' onClick={toggleLanguage}>
         {language === 'original' ? 'Switch to English' : 'Переключиться на русский'}
       </button>
       {zodiacSigns.map((zodiac, index) => (
@@ -45,8 +45,8 @@ function App() {
           sign={language === 'original' ? zodiac.russianSign : zodiac.englishSign}
           icon={zodiac.icon}
           signkey={zodiac.signkey}
-          language={language} // Передаем язык как пропс
-          period={zodiac.period} // Передаем период как пропс
+          language={language}
+          period={zodiac.period}
         />
       ))}
     </div>
