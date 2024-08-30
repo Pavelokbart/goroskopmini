@@ -1,19 +1,16 @@
 /* App.css */
 .App {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(200px, 1fr)
-  ); /* Автоматически регулирует количество колонок */
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  justify-items: center;
-  align-items: start; /* Выравнивание карточек по верху */
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Минимальная высота на весь экран */
   background-image: url(bg2jpg.jpg);
-  background-size: cover;
+  background-size: cover; /* Фон на весь экран */
   background-position: center;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 20px; /* Внутренний отступ для отступа от краев */
+  box-sizing: border-box; /* Учитывать отступы в размере контейнера */
 }
 
 .switch-button {
@@ -33,6 +30,8 @@
 
 /* GoroskopBlock.css */
 .goroskop-block {
+  margin-top: 20px;
+  flex: 1 1 calc(33.333% - 40px); /* Три карточки в ряд */
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   padding: 20px;
