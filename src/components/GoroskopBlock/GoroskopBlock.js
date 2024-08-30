@@ -32,9 +32,10 @@ function GoroskopBlock({ sign, icon, signkey, language, period }) {
 
     return (
         <div className="goroskop-block">
+
             <div className="goroskop-icon">{icon}</div>
             <div className="goroskop-content">
-                <h3>{sign} ({period})</h3> 
+                <h3>{sign} ({period})</h3>
                 {horoscope ? (
                     <p>{horoscope}</p>
                 ) : (

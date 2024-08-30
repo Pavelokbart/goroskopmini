@@ -36,19 +36,23 @@ function App() {
 
   return (
     <div className="App">
-      <button className='switch-button' onClick={toggleLanguage}>
-        {language === 'original' ? 'Switch to English' : 'Переключиться на русский'}
-      </button>
-      {zodiacSigns.map((zodiac, index) => (
-        <GoroskopBlock
-          key={index}
-          sign={language === 'original' ? zodiac.russianSign : zodiac.englishSign}
-          icon={zodiac.icon}
-          signkey={zodiac.signkey}
-          language={language}
-          period={zodiac.period}
-        />
-      ))}
+      <div className='app-container'>
+        <button className='switch-button' onClick={toggleLanguage}>
+          {language === 'original' ? 'Switch to English' : 'Переключиться на русский'}
+        </button>
+        {zodiacSigns.map((zodiac, index) => (
+          <GoroskopBlock
+            key={index}
+            sign={language === 'original' ? zodiac.russianSign : zodiac.englishSign}
+            icon={zodiac.icon}
+            signkey={zodiac.signkey}
+            language={language}
+            period={zodiac.period}
+          />
+        ))}
+
+      </div>
+
     </div>
   );
 }
